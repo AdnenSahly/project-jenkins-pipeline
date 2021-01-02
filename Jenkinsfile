@@ -38,5 +38,6 @@ pipeline {
         //  sh  'docker push nikhilnidhi/samplewebapp:$BUILD_NUMBER' 
         }
       }
+      }
 	}
 	}
