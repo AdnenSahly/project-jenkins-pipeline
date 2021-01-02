@@ -39,5 +39,13 @@ pipeline {
         }
       }
       }
+      
+       stage('Run Docker container on remote hosts') {
+             
+            steps {
+                sh "docker -H ssh://sahly@192.168.45.156 run -d -p 8085:8086 sahlyadnen/sahlyproject"
+ 
+            }
+        }
 	}
 	}
