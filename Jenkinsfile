@@ -25,7 +25,7 @@ pipeline {
            steps {
               
                 sh 'docker build -t sahlyproject:latest .' 
-                sh 'docker tag samplewebapp sahlyadnen/sahlyproject:latest'
+                sh 'docker tag sahlyproject sahlyadnen/sahlyproject:latest'
                 //sh 'docker tag samplewebapp nikhilnidhi/samplewebapp:$BUILD_NUMBER'
                
           }
