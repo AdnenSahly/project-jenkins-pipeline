@@ -34,7 +34,7 @@ pipeline {
           
             steps {
         withDockerRegistry([ credentialsId: "dockerhubId", url: "" ]) {
-          sh  'docker push sahlyproject sahlyadnen/sahlyproject:latest'
+          sh  'docker push sahlyadnen/sahlyproject:latest'
         //  sh  'docker push nikhilnidhi/samplewebapp:$BUILD_NUMBER' 
         }
       }
