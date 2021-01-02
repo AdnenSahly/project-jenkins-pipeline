@@ -44,7 +44,7 @@ pipeline {
              steps {
                 
 
-                   sh"docker -H ssh://sahly@192.168.45.156 -d --name=mysql-standalone env="MYSQL_ROOT_PASSWORD=sa" mysql:5.7"
+                   sh "docker -H ssh://sahly@192.168.45.156 -d --name=mysql-standalone --env="MYSQL_ROOT_PASSWORD=sa" mysql:5.7"
                    sh "docker -H ssh://sahly@192.168.45.156 run -d -p 8085:8086 sahlyadnen/sahlyproject:latest"
                   
                  }
