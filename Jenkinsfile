@@ -44,12 +44,10 @@ pipeline {
              steps {
                 
                 sh "docker -H ssh://sahly@192.168.45.156 run -d -p --name mysql-standalone   --env  MYSQL_ROOT_PASSWORD:sa  --env DATABASE_USER=sa --env DATABASE_PASSWORD=password --env DATABASE_NAME=test  mysql:5.7"
-                 }
-             
-            steps {
-                
                 sh "docker -H ssh://sahly@192.168.45.156 run -d -p 8085:8086  --env DATABASE_HOST=mysql-standalone --env DATABASE_USER=sa --env DATABASE_PASSWORD=password --env DATABASE_NAME=test   DATABASE_PORT=3306  sahlyadnen/sahlyproject"
                  }
-        }
+               }
+             
+            
 	}
 	}
