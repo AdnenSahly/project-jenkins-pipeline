@@ -43,11 +43,9 @@ pipeline {
        stage('Run Docker container on remote hosts') {
              steps {
                 
-                sh"ssh://sahly@192.168.45.156"
-                sh "cd /home/sahly"
-                sh "docker-compose down"
-                sh "docker-compose up"
-                
+               
+                 sh "docker-compose -H ssh://sahly@172.31.28.25 down"
+                  sh "docker-compose -H ssh://sahly@172.31.28.25 up"
                  }
                }
              
