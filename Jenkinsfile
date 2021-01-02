@@ -37,6 +37,6 @@ pipeline {
           sh  'docker push sahlyproject sahlyAdnen/sahlyproject:latest'
         //  sh  'docker push nikhilnidhi/samplewebapp:$BUILD_NUMBER' 
         }
-  
+      }
 	}
 	}
